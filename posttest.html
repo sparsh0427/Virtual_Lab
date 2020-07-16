@@ -1,0 +1,410 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Virtual Labs </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="css/AdminLTE.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="css/all-skins.min.css">
+  
+        <style>
+              
+          .quiz {
+            padding: 0px 0px 0px 0px;
+            width: 85%;
+            
+            margin: 0 auto;
+          }
+          .quiz ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+          .quiz-question {
+            font-weight: 600;
+            display: block;
+            padding: 30px 20px 10px 20px;
+            margin: 0;
+          }
+          .quiz-answer {
+            margin: 0;
+            padding: 10px 20px 10px 20px;
+            background: #f7f7f7;
+            margin-bottom: 5px;
+            cursor: pointer;
+          }
+          .quiz-answer:hover {
+            background: #eee;
+          }
+          .quiz-answer:before {
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border: 1px solid #ccc;
+            background: #fff;
+            vertical-align: middle;
+            margin-right: 10px;
+          }
+          .quiz-answer.active:before {
+            background-color: #333;
+            border-color: #333;
+          }
+          .quiz-answer.correct:before {
+            background-color: green;
+            border-color: green;
+          }
+          .quiz-answer.incorrect:before {
+            background-color: red;
+            border-color: red;
+          }
+          .quiz-answer.active.correct:before {
+            outline: 2px solid green;
+            outline-offset: 2px;
+          }
+          .quiz-result {
+            max-width: 960px;
+            margin: 0 auto;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+            padding: 0px;
+          }
+          .quiz-result.good {
+            background: green;
+          }
+          .quiz-result.mid {
+            background: orange;
+          }
+          .quiz-result.bad {
+            background: red;
+          }
+          </style>
+          <script>
+            window.console = window.console || function(t) {};
+          </script>
+          <script>
+            if (document.location.search.match(/type=embed/gi)) {
+              window.parent.postMessage("resize", "*");
+            }
+          </script>
+    </head>
+  
+    <body class="hold-transition skin-blue sidebar-mini">
+        <!--Navigation Bar-->
+  <div class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.bennett.edu.in/"><span><img src="img/Bennett.png" height="50"></span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active">
+          <a href="">HOME</a>
+        </li>
+        <li class="active">
+          <a href="">LABS</a>
+        </li>
+       
+        <li class="active">
+          <a href="">GITLAB</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+        <div class="wrapper">
+          <header class="main-header">
+        <!-- Logo -->
+        <a href="" class="logo">
+        <p align ="center" style="font-size:1em;"><b>Computer Networks<!-- Write your lab name --></b></p>
+    </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+          <section class="content-header">
+            <ol class="breadcrumb">
+              <li>
+                <a href=""><i class="fa fa-dashboard"></i>Computer Networks<!-- Write your lab name --></a>
+              </li>
+              <li>
+                <a href="#">Demonstration and Implementation of cryptographic algorithms<!-- Write your experiment name --></a>
+              </li>
+              <li class="active">Post test</li>
+            </ol>
+          </section>
+        </nav>
+      </header>
+               
+  
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- search form -->
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group"></div>
+          </form>
+          <!-- /.sear ch form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li class="active treeview">
+                    <a href="index.html">
+                        <i class="fa fa-files-o"></i> <span>Aim</span>
+  
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="theory.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>Theory</span>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="pretest.html">
+                        <i class="fa fa-files-o"></i> <span>Pre Test</span>
+  
+                    </a>
+                </li>
+                
+                <li class="treeview">
+                    <a href="procedure.html">
+                        <i class="fa fa-files-o"></i> <span>Procedure</span>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="simu.html">
+                        <i class="fa fa-laptop"></i>
+                        <span>Simulation</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+  
+                
+                <li class="treeview">
+                    <a href="posttest.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>Post Test</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="references.html">
+                        <i class="fa fa-files-o"></i>
+                        <span>References</span>
+                        <span class="pull-right-container">
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+  
+               <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+                <section class="content-header">
+                <h1 align="center">
+                  <b>Demonstration and Implementation of cryptographic algorithms.</b>
+                </h1>
+                </section>
+                    <!-- Main content -->
+                    <section class="content">
+                    <h3 style="margin-top:5%"><b>Post Test</b></h3>
+                    <h3>Attempt the quiz inorder to test your self :</h3>
+                    <p style="font-size:130%; margin-top:2%">
+  
+                    <!--Pre Test of experiment -->
+                    
+                    <div class="quiz">
+    
+                      <h2 class="quiz-question">Q1:  Cryptography is the study and practice of techniques for secure communication in the presence of third parties called</h2>
+                      <ul id="quiz" data-quiz-question="1">
+                        <li class="quiz-answer" data-quiz-answer="a">a. adversaries</li>
+                        <li class="quiz-answer" data-quiz-answer="b">b. secureity</li>
+                        <li class="quiz-answer" data-quiz-answer="c">c. rsa</li>
+                        <li class="quiz-answer" data-quiz-answer="d">d. xor</li>
+                      </ul>
+                      
+                      <h2 class="quiz-question">Q2: WHat is a cipher?</h2>
+                      <ul id="quiz" data-quiz-question="2">
+                        <li class="quiz-answer" data-quiz-answer="a">a. plaintext</li>
+                        <li class="quiz-answer" data-quiz-answer="b">b. asymmeteric key algorithm</li>
+                        <li class="quiz-answer" data-quiz-answer="c">c. a secret or disguised way of writing</li>
+                        <li class="quiz-answer" data-quiz-answer="d">d. none of the above</li>
+                      </ul>
+                      
+                      <h2 class="quiz-question">Q3: What is the formula to decrypt the message in RSA?
+                      </h2>
+                      <ul id="quiz" data-quiz-question="3">
+                        <li class="quiz-answer" data-quiz-answer="a">a. P = n^d ( mod n )</li>
+                        <li class="quiz-answer" data-quiz-answer="b">b. P = c^d ( mod c )</li>
+                        <li class="quiz-answer" data-quiz-answer="c">c. P = C^d ( mod d )</li>
+                        <li class="quiz-answer" data-quiz-answer="d">d. P = C^d ( mod n )</li>
+                      </ul>
+                      
+                      <!-- <h2 class="quiz-question">Q4: Packets in the data link layer are also called Frames.
+                      </h2>
+                      <ul id="quiz" data-quiz-question="4">
+                        <li class="quiz-answer" data-quiz-answer="a">a. True</li>
+                        <li class="quiz-answer" data-quiz-answer="b">b. False</li>
+                        
+                      </ul>
+                      
+                      <h2 class="quiz-question">Q5: VPN and Proxy are the same thing.</h2>
+                      <ul id="quiz" data-quiz-question="5">
+                          <li class="quiz-answer" data-quiz-answer="a">a. True</li>
+                          <li class="quiz-answer" data-quiz-answer="b">b. False</li>
+                      </ul>
+                      
+                      <h2 class="quiz-question">Q6: Which layer is responsible for converting data packets from the Data Link layer into electrical signals?</h2>
+                      <ul id="quiz" data-quiz-question="6">
+                        <li class="quiz-answer" data-quiz-answer="a">a. Data Link Layer
+                      </li>
+                        <li class="quiz-answer" data-quiz-answer="b">b. Network Layer</li>
+                        <li class="quiz-answer" data-quiz-answer="c">c. Transport Layer </li>
+                        <li class="quiz-answer" data-quiz-answer="d">d. Physical Layer</li>
+                      </ul> -->
+                      
+                    </div>
+                    
+                    <div class="quiz-result"></div>
+                    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+                      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+                    <script id="rendered-js">
+                      var Quiz = function () {
+                        var self = this;
+                        this.init = function () {
+                          self._bindEvents();
+                        };
+                      
+                        this.correctAnswers = [
+                        { question: 1, answer: 'a' },
+                        { question: 2, answer: 'c' },
+                        { question: 3, answer: 'd' },];
+                      
+                      
+                        this._pickAnswer = function ($answer, $answers) {
+                          $answers.find('.quiz-answer').removeClass('active');
+                          $answer.addClass('active');
+                        };
+                        this._calcResult = function () {
+                          var numberOfCorrectAnswers = 0;
+                          $('ul[data-quiz-question]').each(function (i) {
+                            var $this = $(this),
+                            chosenAnswer = $this.find('.quiz-answer.active').data('quiz-answer'),
+                            correctAnswer;
+                      
+                            for (var j = 0; j < self.correctAnswers.length; j++) {if (window.CP.shouldStopExecution(0)) break;
+                              var a = self.correctAnswers[j];
+                              if (a.question == $this.data('quiz-question')) {
+                                correctAnswer = a.answer;
+                              }
+                            }window.CP.exitedLoop(0);
+                      
+                            if (chosenAnswer == correctAnswer) {
+                              numberOfCorrectAnswers++;
+                      
+                              // highlight this as correct answer
+                              $this.find('.quiz-answer.active').addClass('correct');
+                            } else
+                            {
+                              $this.find('.quiz-answer[data-quiz-answer="' + correctAnswer + '"]').addClass('correct');
+                              $this.find('.quiz-answer.active').addClass('incorrect');
+                            }
+                          });
+                          if (numberOfCorrectAnswers < 1) {
+                            return { code: 'bad', text: 'Poor Knowledge of Computer Networks' };
+                          } else
+                          if (numberOfCorrectAnswers == 1 || numberOfCorrectAnswers == 2) {
+                            return { code: 'mid', text: 'Moderate Knowledge of Computer Networks' };
+                          } else
+                          if (numberOfCorrectAnswers > 2) {
+                            return { code: 'good', text: 'Good Knowledge of Computer Networks' };
+                          }
+                        };
+                        this._isComplete = function () {
+                          var answersComplete = 0;
+                          $('ul[data-quiz-question]').each(function () {
+                            if ($(this).find('.quiz-answer.active').length) {
+                              answersComplete++;
+                            }
+                          });
+                          if (answersComplete >= 3) {
+                            return true;
+                          } else
+                          {
+                            return false;
+                          }
+                        };
+                        this._showResult = function (result) {
+                          $('.quiz-result').addClass(result.code).html(result.text);
+                        };
+                        this._bindEvents = function () {
+                          $('.quiz-answer').on('click', function () {
+                            var $this = $(this),
+                            $answers = $this.closest('ul[data-quiz-question]');
+                            self._pickAnswer($this, $answers);
+                            if (self._isComplete()) {
+                      
+                              // scroll to answer section
+                              $('html, body').animate({
+                                scrollTop: $('.quiz-result').offset().top });
+                      
+                      
+                              self._showResult(self._calcResult());
+                              $('.quiz-answer').off('click');
+                      
+                            }
+                          });
+                        };
+                      };
+                      var quiz = new Quiz();
+                      quiz.init();
+                      //# sourceURL=pen.js
+                          </script>
+          
+                    </p>
+                </section>
+            <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+  <footer class="main-footer">
+  <h4 align="center">Lab contributed by Bennett University, Greater Noida </h4>
+  </footer>
+  <!-- /.control-sidebar -->        </div>
+    </body>
+  </html>
+  
+  <!-- ./wrapper -->
+  <!-- jQuery 2.2.3 -->
+  <script src="js/jquery-2.2.3.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <!-- Bootstrap 3.3.6 -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Slimscroll -->
+  <script src="js/jquery.slimscroll.min.js"></script>
+  <!-- FastClick -->
+  <script src="js/fastclick.js"></script>
+  <!-- AdminLTE App -->
+  <script src="js/app.min.js"></script>
