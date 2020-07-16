@@ -145,6 +145,7 @@
                 <h1 align="center"> 
                   <b>Demonstration and Implementation of cryptographic algorithms.</b>
                 </h1>
+                
                 </section>
                     <!-- Main content -->
                     <section class="content">
@@ -157,6 +158,7 @@
                         Click on this <a href="simulation.html">Link</a> to go to simulation Window.
                     </p>
                     </p>
+                    <a style="float: right;" href="procedure.html" onclick="basicPopup(this.href);return false"><h3>Open a popup procedure window</h3></a>
                 </section>
             <!-- /.content -->
             </div>
@@ -164,6 +166,11 @@
 <footer class="main-footer">
 	<h4 align="center">Lab contributed by Bennett University, Greater Noida </h4>
 </footer>
+<script>
+    function basicPopup(url) {
+popupWindow = window.open(url,'popUpWindow','height=500,width=500,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
+	}
+</script>
 <!-- /.control-sidebar -->        </div>
     </body>
 </html>
