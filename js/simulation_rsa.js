@@ -57,37 +57,12 @@ function rsa3_generate() {
 
 function rsa4_generate() {
     var message = document.rsa_form4.message.value;
-
-    var encryption_key = document.rsa_form4.encryption_key.value
-    // var decryption_key = document.rsa_form4.decryption_key.value
-    var n = document.rsa_form4.n.value
-
-    // var c = Math.pow(message,document.rsa_form2.e_random.value);
-    // var m = Math.pow(c,document.rsa_form3.d_mod.value);
-    // c = c % document.rsa_form2.n_p_multiply_q.value;
-    // m = m % document.rsa_form2.n_p_multiply_q.value;
-    var c = Math.pow(message, encryption_key);
-    // var m = Math.pow(c, decryption_key);
-
-    c = c % n;
-    
-
-    // m = m % n;
-
+    console.log("message ",message)
+    var c = Math.pow(message,document.rsa_form2.e_random.value);
+    var m = Math.pow(c,document.rsa_form3.d_mod.value);
+    c = c % document.rsa_form2.n_p_multiply_q.value;
+    m = m % document.rsa_form2.n_p_multiply_q.value;
     document.rsa_form4.encrypt.value = Math.round(c);
-    // document.rsa_form4.decrypt.value = Math.round(m);
-
-}
-
-function rsa5_generate() {
-    var message = document.rsa_form4.message.value;
-    var encryption_key = document.rsa_form4.encryption_key.value
-    var decryption_key = document.rsa_form5.decryption_key.value
-    var n = document.rsa_form4.n.value
-    var c = Math.pow(message, encryption_key);
-    c = c % n;
-    var m = Math.pow(c, decryption_key);
-    m = m % n;
-    document.rsa_form5.decrypt.value = Math.round(m);
-
+    document.rsa_form4.decrypt.value = Math.round(m);
+    
 }
