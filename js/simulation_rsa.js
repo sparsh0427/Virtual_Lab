@@ -56,6 +56,9 @@ function rsa3_generate() {
 }
 
 function rsa4_generate() {
+    if(document.rsa_form4.message.value > 520) {
+        return alert("Enter message in valid range")
+    }
     var message = document.rsa_form4.message.value;
     console.log("message ",message)
     var c = Math.pow(message,document.rsa_form2.e_random.value);
